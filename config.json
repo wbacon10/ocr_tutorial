@@ -1,0 +1,7 @@
+{
+  "RESULT_TOPIC": "whitley_result_topic",
+  "RESULT_BUCKET": "whitley_ocr_tutorial_text_bucket",
+  "TRANSLATE_TOPIC": "whitley_translate_topic",
+  "TRANSLATE": true,
+  "TO_LANG": ["en", "fr", "es", "ja", "ru"]
+}
