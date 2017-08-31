@@ -77,9 +77,16 @@ function detectText (bucketName, filename) {
         const messageData = {
           text: text,
           filename: filename,
-          lang: lang,
-          from: detection.language
+          errorCode: errorCode,
+          troubleshootUrl: troubleshootUrl
+//           lang: lang,
+//           from: detection.language
         };
+        
+        //example error code: SRM-0x0011
+        if (messageData.hasOwnProperty('SRM-0x0011')) {
+          troubleshootUrl = 'https://www.xfinity.com/support/cable-tv/top-video-on-demand-error-codes/'
+        }
 
         return publishResult(topicName, messageData);
       });
